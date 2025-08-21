@@ -18,7 +18,7 @@ int main()
         printf("DIREITA → ");
         torre_mov--;
     }
-    printf("\n\nA posição final da Torre Branca é %s\n\n", posicao_torre_final); 
+    printf("\n\nA posição final da Torre Branca é %s\n\n", posicao_torre_final);
 
     // move-se na diagonal 5 casas para diagonal para cima a direita
     char bispo[] = "Bispo";
@@ -34,11 +34,9 @@ int main()
         printf("CIMA ↑ DIREITA → ");
         bispo_mov--;
     } while (bispo_mov > 0);
-    
-    printf("\n\nA posição final do Bispo Branco é %s\n\n", posicao_bispo_final); 
 
+    printf("\n\nA posição final do Bispo Branco é %s\n\n", posicao_bispo_final);
 
-    
     // move-se em todas as direções, 8 casas para esqueda.
     char rainha[] = "Rainha";
     int rainha_mov = 8;
@@ -53,9 +51,31 @@ int main()
         printf("← ESQUERDA ");
         rainha_mov--;
     }
-    
-    
-    printf("\n\nA posição final da Rainha Preta é %s\n", posicao_rainha_final); 
+
+    printf("\n\nA posição final da Rainha Preta é %s\n", posicao_rainha_final);
+
+    // move-se em forma de L, BAIXO - BAIXO - ESQUERDA
+    char cavalo[] = "Cavalo";
+    int cavalo_mov = 2;
+    char posicao_cavalo[] = "F6";
+    char posicao_cavalo_final[] = "E8";
+
+    printf("MOVIMENTOS DO CAVALO PRETO\n");
+    printf("A posição atual do Cavalo Preto é %s\n\n", posicao_cavalo);
+    printf("O Cavalo irá se mover 3 casas em L agora...\n");
+    for (int i = cavalo_mov; i > 0; i--)
+    {
+        printf("↓ BAIXO");
+
+        while (i == 1)
+        {
+            printf(" ← ESQUERDA");
+            break;
+        }
+        printf("\n");
+    }
+
+    printf("\nA posição final do Cavalo Preto é %s\n", posicao_cavalo_final);
 
     return 0;
 }
